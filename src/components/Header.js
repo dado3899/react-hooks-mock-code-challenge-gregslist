@@ -1,7 +1,8 @@
 import React from "react";
+import Addto from "./Addto";
 import Search from "./Search";
 
-function Header() {
+function Header({setSearch,handlePost}) {
   return (
     <header>
       <h1>
@@ -10,7 +11,8 @@ function Header() {
         </span>
         gregslist
       </h1>
-      <Search />
+      <Search setSearch={setSearch}/>
+      <Addto handlePost={handlePost}/>
     </header>
   );
 }
