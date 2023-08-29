@@ -1,8 +1,7 @@
 import React from "react";
 import Search from "./Search";
-import Posting from "./Posting";
 
-function Header({setcurrentsearch,handlepost}) {
+function Header() {
   return (
     <header>
       <h1>
@@ -11,8 +10,7 @@ function Header({setcurrentsearch,handlepost}) {
         </span>
         gregslist
       </h1>
-      <Search setcurrentsearch={setcurrentsearch}/>
-      <Posting handlepost={handlepost}/>
+      <Search />
     </header>
   );
 }
