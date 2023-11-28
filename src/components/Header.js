@@ -1,7 +1,7 @@
 import React from "react";
 import Search from "./Search";
 
-function Header() {
+function Header({setSearch,setAlphabetical}) {
   return (
     <header>
       <h1>
@@ -10,7 +10,9 @@ function Header() {
         </span>
         gregslist
       </h1>
-      <Search />
+      <Search setSearch={setSearch}/>
+      <button onClick={()=>setAlphabetical(true)}>A-Z</button>
+      <button onClick={()=>setAlphabetical(false)}>Z-A</button>
     </header>
   );
 }
